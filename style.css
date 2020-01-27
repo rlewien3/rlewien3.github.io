@@ -1,7 +1,46 @@
 h1 {
   font-family: 'Montserrat', sans-serif;
-  font-size: 80pt;
+  font-weight: 900;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 100;
+}
+
+.title-box {
   position: absolute;
-  top: 30%;
-  left: 10%;
+  top: 32%;
+  left: 8%;
+  right: 8%;
+}
+
+.title {
+  font-size: 80pt;
+}
+
+.subtitle {
+  font-size: 20pt;
+  position: relative;
+  bottom: 30px;
+}
+
+.header-box {
+  margin: auto;
+  position: relative;
+  top: 15px;
+}
+
+.header {
+  font-size: 12pt;
+  letter-spacing: 8px;
+  text-align: center;
+}
+
+.title-button {
+  position: absolute !important;
+  bottom: 10%;
+  margin: auto;
+  left: 1%;
+  right: 1%;
 }
