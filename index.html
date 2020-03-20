@@ -113,6 +113,9 @@
 
 
   <main>
+
+    <!--?------------------- Title ------------------------>
+
     <div class="title-container">
       <div class="title-text-container">
         <h1 class="title"><span>Hi!</span> I'm Ryan Lewien.</h1>
@@ -120,14 +123,16 @@
       </div>
     </div>
 
+
+    <!--?------------------- About ------------------------>
+
     <section id="about">
       <button id="down-arrow">
         <img id="arrow" src="./resources/img/arrow.svg" alt="arrow">
       </button>
 
-      <img id="line-about" src="./resources/img/line-about.svg" alt="line">
+      <img id="line-about" class="line" src="./resources/img/line.svg" alt="line">
       <img id="profile-pic" src="./resources/img/profile-pic.jpg" alt="profile-pic">
-      
         
       <div class="card" id="about-card">
         <h2>About Me</h2>
@@ -152,8 +157,10 @@
       </div>
     </section>
 
+    <!--?------------------- What I Do ------------------------>
+
     <section id="what-i-do">
-      <img id="what-i-do-line" src="./resources/img/line-about.svg" alt="line">
+      <img id="what-i-do-line" class="line" src="./resources/img/line.svg" alt="line">
       <div class="end-dot"></div>
       <h2>What I do</h2>
 
@@ -209,8 +216,8 @@
             <h3 class="mobile-card-title">Development</h3>
           </div>
           <div class=mobile-card-bottom>
-            <p>Software development, both front and back end, are what I enjoy and do best! Developing for 
-              the web is my bread and butter, but through a Bachelor of Science (Computing & Software Systems) 
+            <p>Software development, both front and back end, is what I enjoy and do best! Developing for 
+              the web is my bread and butter, but through a Bachelor of Science & Master of Information Systems 
               I’ve been extending my tech stack to wider software systems.</p>
           </div>
         </div>
@@ -240,9 +247,81 @@
       </div>
     </section>
 
+    <!--?------------------- Projects ------------------------>
+
+    <section id="projects">
+      <img id="projects-line" src="./resources/img/line-project.svg" alt="line">
+      
+      <h2>Recent Projects</h2>
+      <div class="featured-project" style="margin-top: 50px;">
+        <div class="project-img-container">
+          <img class="project-img" src="./resources/img/esnlc.webp" alt="esnlc-website">
+        </div>
+        <div class="project-info">
+          <h4 class="project-title">ESNLC Website</h4>
+          <p>I fully redesigned and developed the Elwood St Kilda Neighbourhood 
+            Learning Centre’s WordPress website from scratch, including a new logo and a custom theme. 
+            Over several months I worked closely with the team to determine requirements and maximise 
+            effectiveness for the centre long-term.
+          </p>
+          <p>The client wanted a clean look to modernise and match any future 
+            colour scheme for the brand, while not being too flashy for the older demographic. I also 
+            made special care to simplify upkeep, with all page categories automatically updating 
+            after any new posts are created.</p>
+          <p class="technologies">WordPress • PHP • Javascript • HTML • CSS</p>
+          <a href="https://www.esnlc.com.au/" target="_blank">
+            <img class="share-link" src="./resources/img/share.svg" alt="link">
+          </a>
+        </div>
+      </div>
+
+      <div class="featured-project">
+        <div class="project-info" style="margin-left: 0; margin-right: 31px; text-align: right;">
+          <h4 class="project-title">Erbe Project</h4>
+          <p>This web app was created for a client family to store and pass down heritage items, 
+            to keep track of their stories before the items themselves tarnish.
+          </p>
+          <p>I completed this with a team of four other university students, mainly focusing 
+            on the development of the front end but also utilising advanced technologies such 
+            as the Google Vision API for automatic tagging of images into categories.</p>
+          <p class="technologies">Pug • CSS • Bootstrap • Material Design 
+            NodeJS • Express • MongoDB</p>
+          <a href="https://it-project-253713.appspot.com/" target="_blank">
+            <img class="share-link" src="./resources/img/share.svg" alt="link">
+          </a>
+        </div>
+        <div class="project-img-container" style="width: 845px;">
+          <img class="project-img" src="./resources/img/erbe-1.webp" alt="erbe-1">
+          <img class="project-img" src="./resources/img/erbe-2.webp" alt="erbe-2" style="margin-left: 38px;">
+        </div>
+      </div>
+
+      <div class="featured-project" style="margin-top: 95px;">
+        <div class="project-img-container">
+          <img class="project-img" src="./resources/img/officeworks-1.webp" alt="officeworks-1" style="margin-right: 36px;">
+          <img class="project-img" src="./resources/img/officeworks-2.webp" alt="officeworks-2" style="margin-right: 36px;">
+          <img class="project-img" src="./resources/img/officeworks-3.webp" alt="officeworks-3">
+        </div>
+        <div class="project-info">
+          <h4 class="project-title" style="margin-bottom: 0px;">Officeworks</h4>
+          <h4 class="project-subtitle">Bourke St Bushfire Appeal</h4>
+          <p style="width: 273px;">I was tasked with creating all signage for the Bourke St Officeworks fundraising appeal, 
+            specifically raising towards the Australian Bushfire relief. This included banners, posters, 
+            signage for items being sold as well as voucher cards.
+          </p>
+          <p style="width: 273px;">The project was great experience in creating from a design spec, and aligning with the 
+            greater Officeworks visual look. Graphics are from royalty-free sources, or from the 
+            head office themselves.</p>
+          <p class="technologies">Photoshop • Sketch • Illustrator</p>
+        </div>
+      </div>
+
+      <div class="end-dot" style="margin-top: 340px;"></div>
+    </section>
+
+    <!--?------------------- Contact ------------------------>
+
     <section id="contact">
-      <img id="contact-line" src="./resources/img/line-about.svg" alt="line">
-      <div class="end-dot" id="contact-end-dot"></div>
       <img id="mail-icon" src="./resources/img/mail.svg" alt="mail">
       
       <div class="card" id="contact-card">
@@ -256,6 +335,9 @@
         <a class="cta" id="contact-button" href="mailto:ryan@ryanlewien.com">Get In Touch</a>
       </div>
     </section>
+
+
+    <!--?------------------- Footer ------------------------>
 
     <footer>
       <p>Designed & Developed by <span>Ryan Lewien</span></p>
