@@ -5,11 +5,11 @@
 <style type="text/css">
 	.st0{fill:none;stroke:url(#SVGID_1_);stroke-width:7;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:0.1,15;}
 </style>
-<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="427.7551" y1="105.4352" x2="427.7551" y2="-1165.8195" gradientTransform="matrix(1 0 0 1 0 2058)">
+<linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="421.7551" y1="100.6784" x2="421.7551" y2="-1168.392" gradientTransform="matrix(1 0 0 1 0 2058)">
 	<stop  offset="0" style="stop-color:#6F41F2"/>
 	<stop  offset="1" style="stop-color:#8C98FF"/>
 </linearGradient>
-<path class="st0" d="M428.4,2301.5V2099c-0.7-19-15.7-34-34.2-34H46.2c-18.7,0-33.9-15.2-33.9-33.9v-611.7
-	c0-18.7,15.2-33.9,33.9-33.9h763.2c18.7,0,33.9-15.2,33.9-33.9V909.9c0-18.7-15.2-33.9-33.9-33.9H46.2c-18.7,0-33.9-15.2-33.9-33.9
-	v-598c0-18.8,15.3-34,34.1-33.9l354.6,1.7c17.8,0.1,32.4-14.3,32.5-32.2L434.3-6"/>
+<path class="st0" d="M422.4,2296.5V2094c-0.7-19-15.7-34-34.2-34H40.2c-18.7,0-33.9-15.2-33.9-33.9v-615.7
+	c0-18.7,15.2-33.9,33.9-33.9h763.2c18.7,0,33.9-15.2,33.9-33.9V904.9c0-18.7-15.2-33.9-33.9-33.9H40.2c-18.7,0-33.9-15.2-33.9-33.9
+	v-598c0-18.8,15.3-34,34.1-33.9l350.6,1.7c17.8,0.1,32.4-14.3,32.5-20.2L423.3-7"/>
 </svg>

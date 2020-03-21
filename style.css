@@ -45,6 +45,12 @@ li {
   list-style-position: inside;
 }
 
+a {
+  text-decoration: none !important;
+  color: #2b2b2b;
+  font-weight: 400;
+}
+
 button {
   border: none;
   cursor: pointer;
@@ -64,9 +70,26 @@ button {
   padding-top: 14px;
 }
 
+.end-dot {
+  width: 16px;
+  height: 16px;
+  top: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(#6F41F2), to(#836BC5));
+  background: linear-gradient(180deg, #6F41F2 0%, #836BC5 100%);
+  -webkit-box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.07);
+          box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.07);
+  border-radius: 19px;
+}
+
 .line {
   height: 262px;
   width: 14px;
+}
+
+@media (max-width: 400px) {
+  h2 {
+    font-size: 10vw;
+  }
 }
 
 /**************** Nav Bar ****************/
@@ -246,8 +269,6 @@ nav {
   background-color: #4b4b4b;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  -webkit-box-shadow: 0 2px 2px 5px rgba(0, 0, 0, 0.02);
-          box-shadow: 0 2px 2px 5px rgba(0, 0, 0, 0.02);
 }
 
 .toggle-btn .bar:nth-child(2) {
@@ -559,17 +580,6 @@ nav {
   z-index: -1;
 }
 
-.end-dot {
-  width: 16px;
-  height: 16px;
-  top: 0;
-  background: -webkit-gradient(linear, left top, left bottom, from(#6F41F2), to(#836BC5));
-  background: linear-gradient(180deg, #6F41F2 0%, #836BC5 100%);
-  -webkit-box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.07);
-          box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.07);
-  border-radius: 19px;
-}
-
 #what-i-do h2 {
   margin-top: 30px;
 }
@@ -780,31 +790,7 @@ nav {
   margin-top: 365px;
 }
 
-#projects-line {
-  width: 831px;
-  height: 2307px;
-  position: absolute;
-  top: -30px;
-  padding-right: 13px;
-  z-index: -1;
-}
-
-.featured-project {
-  margin-top: 73px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  width: 1159px;
-  height: 419px;
-}
-
 .project-title {
-  margin-top: 8px;
-  margin-bottom: 12px;
   font-family: Poppins;
   font-style: normal;
   font-weight: 300;
@@ -821,31 +807,11 @@ nav {
   font-size: 22px;
   line-height: 33px;
   color: #616161;
-  margin-bottom: 12px;
-}
-
-.project-img-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
 }
 
 .project-img {
   -webkit-filter: drop-shadow(7px 7px 35px rgba(0, 0, 0, 0.12));
           filter: drop-shadow(7px 7px 35px rgba(0, 0, 0, 0.12));
-}
-
-.project-info {
-  text-align: left;
-  margin-left: 40px;
-}
-
-.project-info p {
-  margin-bottom: 15px;
 }
 
 .technologies {
@@ -856,13 +822,210 @@ nav {
   line-height: 21px;
   letter-spacing: 0.01em;
   color: #313131;
-  margin-top: 18px;
 }
 
 .share-link {
   width: 24px;
   height: 22px;
-  margin-top: 28px;
+}
+
+@media (min-width: 1159px) {
+  #projects {
+    background-image: url("./resources/img/line-project.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    top: -5px;
+  }
+  #projects #projects-end-dot {
+    margin-top: 340px;
+  }
+  #projects-start-dot, #projects-line {
+    display: none;
+  }
+  .featured-project {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 1159px;
+    height: 419px;
+  }
+  #project-1 {
+    margin-top: 50px;
+  }
+  #project-2 {
+    margin-top: 73px;
+  }
+  #project-3 {
+    margin-top: 90px;
+  }
+  .project-title {
+    margin-top: 8px;
+    margin-bottom: 12px;
+  }
+  .project-subtitle {
+    margin-bottom: 12px;
+  }
+  .project-img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .project-info {
+    text-align: left;
+    margin-left: 40px;
+  }
+  .project-info p {
+    margin-bottom: 15px;
+  }
+  .technologies {
+    margin-top: 18px;
+  }
+  .share-link {
+    margin-top: 28px;
+  }
+  .right-align {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+  }
+  .right-align .project-info {
+    margin-left: 0;
+    margin-right: 31px;
+    text-align: right;
+  }
+  #img-container-2 {
+    width: 845px;
+  }
+  #erbe-2 {
+    margin-left: 38px;
+  }
+  #officeworks-1, #officeworks-2 {
+    margin-right: 36px;
+  }
+  #project-3 .project-title {
+    margin-bottom: 0px;
+  }
+  #project-3 p {
+    width: 273px;
+  }
+}
+
+@media (max-width: 1159px) {
+  .projects-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    background-image: url("./resources/img/line-project-mobile.svg");
+    background-position: center;
+    background-repeat: repeat-y;
+    background-size: 14px 1423px;
+  }
+  #projects h2 {
+    margin-top: 30px;
+    margin-bottom: 23px;
+  }
+  #projects-start-dot {
+    background: -webkit-gradient(linear, left top, left bottom, from(#8C98FF), to(#acb2f1));
+    background: linear-gradient(180deg, #8C98FF 0%, #acb2f1 100%);
+  }
+  .featured-project {
+    width: 90%;
+    margin-bottom: 80px;
+    max-width: 600px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#F8F8F8), to(#FFFFFF));
+    background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+    -webkit-box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.06);
+            box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.06);
+  }
+  .project-img-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100%;
+  }
+  .project-img {
+    width: 100%;
+  }
+  #erbe-1 {
+    width: 26.25847%;
+    margin-right: 4%;
+  }
+  #erbe-2 {
+    width: 69.74153%;
+  }
+  #officeworks-1 {
+    width: 36.95186%;
+    margin-right: 4%;
+  }
+  #officeworks-2 {
+    width: 21.25997%;
+    margin-right: 4%;
+  }
+  #officeworks-3 {
+    width: 33.78817%;
+  }
+  .project-info {
+    margin-top: 10px;
+    text-align: left;
+    padding: 0px 25px 19px 25px;
+  }
+  .project-info p {
+    margin-bottom: 7px;
+  }
+  .project-info .technologies {
+    margin-bottom: 12px;
+  }
+  .project-title {
+    font-size: 25pt;
+    margin-bottom: -3px;
+  }
+  .project-subtitle {
+    font-size: 13pt;
+    margin-top: 3px;
+    margin-bottom: 3px;
+  }
+}
+
+@media (max-width: 1159px) and (max-width: 400px) {
+  .project-title {
+    font-size: 7vw;
+  }
+  .project-subtitle {
+    font-size: 4vw;
+  }
+}
+
+@media (max-width: 1159px) {
+  #project-3 {
+    margin-bottom: 180px;
+  }
+  #project-3 .project-title {
+    margin-bottom: -18px;
+  }
 }
 
 /****************** Contact *******************/
@@ -959,10 +1122,6 @@ footer {
 footer p {
   font-family: Rubik;
   color: white;
-}
-
-footer p span {
-  font-weight: 500;
 }
 
 /**************** Animations ******************/
@@ -1121,11 +1280,6 @@ footer p span {
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
-}
-
-.title span {
-  -webkit-animation: fadein-up 1.8s ease forwards;
-          animation: fadein-up 1.8s ease forwards;
 }
 
 .title {
