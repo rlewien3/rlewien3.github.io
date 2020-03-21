@@ -218,10 +218,10 @@
   
   .mobile-links a {
     width: 100%;
-    height: 15vh;
+    height: 13vh;
     display: block;
     font-size: 1.8em;
-    line-height: 15vh;
+    line-height: 13vh;
     text-decoration: none;
     text-align:center;
     color:#fff;
@@ -322,7 +322,25 @@
       visibility: visible;
     }
   }
+
+  /******** Loading Bar *********/
+  .loading {
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    left: calc(50vw - 35px);
+    top: calc(50vh - 35px);
+    z-index: 20;
+    visibility: hidden;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
   
+  #loading-circle {
+    visibility: hidden;
+    stroke-dasharray: 332px; 
+    stroke-dashoffset: 332px;
+  }
   
   /******** Title Page *********/
   
@@ -344,7 +362,6 @@
     font-size: 100px;
     letter-spacing: 0.01em;
     color: #616161;
-    text-shadow: 7px 7px 25px rgba(0, 0, 0, 0.12);
     display: inline-block;
     white-space: nowrap;
   }
@@ -356,7 +373,6 @@
     font-size: 23px;
     letter-spacing: 0.01em;
     color: #616161;
-    text-shadow: 7px 7px 25px rgba(0, 0, 0, 0.06);
     white-space: nowrap;
   }
   
@@ -381,7 +397,9 @@
     }
   
     .title-subtitle {
+      display: none;
       font-size: 4vw;
+      width: 80vw;
     }
   
     .title-subtitle span {
@@ -732,18 +750,6 @@
       width: 1159px;
       height: 419px;
     }
-
-    #project-1 {
-      margin-top: 50px;
-    }
-
-    #project-2 {
-      margin-top: 73px;
-    }
-
-    #project-3 {
-      margin-top: 90px;
-    }
   
     .project-title {
       margin-top: 8px;
@@ -762,14 +768,16 @@
     .project-info {
       text-align: left;
       margin-left: 40px;
+      width: 300px;
   
       p {
         margin-bottom: 15px;
       }
+
     }
   
     .technologies {
-      margin-top: 18px;
+      margin-top: 14px;
     }
   
     .share-link {
@@ -798,14 +806,33 @@
       margin-right: 36px;
     }
 
+    #project-1 {
+      margin-top: 50px;
+
+    }
+
+    #project-2 {
+      margin-top: 73px;
+
+      .project-info {
+        width: 250px;
+      }
+    }
+
     #project-3 {
       .project-title {
         margin-bottom: 0px;
       }
 
       p {
-        width: 273px;
+        width: 250px;
       }
+
+      .technologies {
+        margin-top: 30px;
+      }
+
+      margin-top: 90px;
     }
   }
 
@@ -1032,39 +1059,69 @@
     60% { opacity: 0; transform: translateY(10px); }
     100% { opacity: 1; transform: translateY(0px); }
   }
+
+  @keyframes come-in {
+    0% { opacity: 0; transform: translateY(10px); }
+    50% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0px); }
+  }
+
+  @keyframes loading-circle {
+    0% { visibility: visible; opacity: 0; }
+    10% { opacity: 1; stroke-dasharray: 332px; stroke-dashoffset: 332px; }
+    50% { stroke-dashoffset: 0; }
+    80% { opacity: 1; stroke-dashoffset: -332px; }
+    90% { opacity: 1; stroke-dashoffset: -332px; }
+    100% { opacity: 0; stroke-dashoffset: -332px; }
+  }
+
+  @keyframes appear {
+    0% { visibility: visible; opacity: 0; }
+    10% { opacity: 1; }
+    90% { opacity: 1; }
+    100% { opacity: 0; }
+  }
+
+  #loading-circle {
+    animation: loading-circle 2s ease forwards;
+  }
+
+  .loading {
+    animation: appear 2s ease forwards;
+  }
   
   .title {
-    animation: fadein-up 1.8s ease forwards;
+    animation: fadein-up 1.8s ease 2.5s forwards;
+    animation-fill-mode: both;
   }
   
   .title-subtitle {
-    animation: fadein-up-0 2s ease forwards;
+    animation: fadein-up-0 2s ease 2.5s forwards;
+    animation-fill-mode: both;
   }
   
   .floating-icons {
-    animation: fadein-1 1.5s ease forwards;
+    animation: fadein-1 1.5s ease 2.5s forwards;
+    animation-fill-mode: both;
   }
   
   .logo-container, nav, .toggle-btn  {
-    animation: fadein-up-1 1.5s ease forwards;
+    animation: fadein-up-1 1.5s ease 2.5s forwards;
+    animation-fill-mode: both;
   }
   
   #about {
-    animation: fadein-up-2 2s ease forwards;
+    animation: fadein-up-2 2s ease 2.5s forwards;
+    animation-fill-mode: both;
   }
   
   .come-in {
     transform: translateY(150px);
     animation: come-in 2s ease forwards;
+    animation-fill-mode: both;
   }
   
   .already-visible {
     transform: translateY(0);
     animation: none;
-  }
-  
-  @keyframes come-in {
-    0% { opacity: 0; transform: translateY(10px); }
-    50% { opacity: 0; transform: translateY(10px); }
-    100% { opacity: 1; transform: translateY(0px); }
   }
