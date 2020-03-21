@@ -17,6 +17,13 @@
     letter-spacing: 0.01em;
     color: #313131;
   }
+
+  @media (max-width: 768px) {
+    p {
+      font-size: 16px;
+      line-height: 23px;
+    }
+  }
   
   h2 {
     font-weight: 900;
@@ -101,12 +108,13 @@
     margin-left: auto;
     display: flex;
     align-items: center;
+    z-index: 10;
   }
   
   #nav-links {
     display: flex;
     list-style: none;
-    padding: 0px 19px 0px 0px;
+    padding-right: 25px;
   }
   
   .logo-container {
@@ -124,30 +132,98 @@
     text-transform: uppercase;
     font-size: 14px;
     text-decoration: none;
+    z-index: 100;
   }
   
   .nav-links__basic {
-    color: #424242;
+    color: white;
     padding: 0px 19px 0px 19px;
   }
+
+  .circles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+  }
+
+  .circle {
+    border-radius: 1000px;
+    position: absolute;
+    overflow: hidden;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  #circle-1 {
+    width: 530px;
+    height: 530px;
+    right: 45px;
+    top: -265px;
+    background: linear-gradient(137.35deg, #8C98FF 28.7%, #606BED 74.81%);
+    z-index: -10;
+  }
+
+  #circle-2-clipper {
+    position: absolute;
+    width: 249px;
+    height: 380px;
+    right: 0px;
+    top: -63px;
+    overflow: hidden;
+  }
+
+  #circle-2 {
+    top: 0;
+    left: 0;
+    width: 306px;
+    height: 306px;
+    background: linear-gradient(180deg, #BDA6ED 0%, #D3C6EE 100%);
+    z-index: 6;
+  }
+
+  #circle-3 {
+    width: 136px;
+    height: 136px;
+    right: 160px;
+    top: 170px;
+    background: linear-gradient(180deg, #9941F2 0%, #6F41F2 100%);
+    z-index: 5;
+  }
+
+  #circle-4 {
+    width: 61px;
+    height: 61px;
+    right: 125px;
+    top: 109px;
+    background: linear-gradient(125.84deg, #A88CF8 8.94%, #8A69E9 74.11%);
+    z-index: 7;
+  }
+
+  #circle-5 {
+    width: 35px;
+    height: 35px;
+    right: 10%;
+    top: 50%;
+    background: linear-gradient(144.48deg, #1BC5EB 12.44%, #4292EC 135.85%);
+  }
+
+
   
   .floating-icons {
     position: fixed;
     list-style: none;
     z-index: 1;
     left: 5%;
-    bottom: 5%;
+    bottom: 200px;
   }
   
   .floating-icon__button {
     width: 24px;
     height: 24px;
     margin: 15px 0px 0px 5px;
-    -webkit-filter: drop-shadow(7px 7px 20px rgba(0, 0, 0, 0.2));
-    filter: drop-shadow( 4px 4px 10px rgba(0, 0, 0, 0.2));
-    -moz-opacity: 0.6;
-    -khtml-opacity: 0.6;
-    opacity: 0.6;
+    -moz-opacity: 0.5;
+    -khtml-opacity: 0.5;
+    opacity: 0.5;
   }
   
   .floating-icon__button:hover {
@@ -344,163 +420,149 @@
   
   /******** Title Page *********/
   
-  .title-container {
+  #title {
     position: relative;
-    height: 70vh;
+    min-height: 70vh;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
-  }
-  
-  .title-text-container {
     text-align: center;
   }
+
+  .title-container {
+    display: flex;
+    margin-top: 21vh;
+  }
   
-  .title {
+  .title-text {
     font-family: Rubik;
     font-weight: 300;
-    font-size: 100px;
+    font-size: 80px;
     letter-spacing: 0.01em;
     color: #616161;
-    display: inline-block;
-    white-space: nowrap;
   }
   
   .title-subtitle {
-    margin-top: 24px;
     font-family: Poppins;
     font-weight: 100;
-    font-size: 23px;
-    letter-spacing: 0.01em;
+    font-size: 21px;
+    letter-spacing: 0.02em;
     color: #616161;
-    white-space: nowrap;
   }
   
-  .title span {
+  .title-text span {
     font-weight: 900;
   }
-  
-  /* Scale title properly */
-  @media (max-width: 1120px) {
-    .title {
-      font-size: 9vw;
+
+  .title-card {
+    background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.06);
+    width: 730px;
+    max-width: 90vw;
+    text-align: left;
+    padding: 0px 48px 48px 48px;
+
+    p {
+      margin-top: 20px;
+      max-width: 436px;
     }
   }
-  
-  @media (max-width: 768px) {
-    
-    .title span {
-      display: block;
-      font-size: 24vw;
-      position: relative;
-      bottom: 32px;
-    }
-  
-    .title-subtitle {
-      display: none;
-      font-size: 4vw;
-      width: 80vw;
-    }
-  
-    .title-subtitle span {
-      display: block;
-    }
-  
-    .title-container {
-      height: 60vh;
-    }
-  }
-  
-  /*************** About Page ****************/
-  
-  #about {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-  }
-  
-  #down-arrow {
-    width: 49px;
-    height: 49px;
-    position: relative;
-    top: 0;
-    background: linear-gradient(180deg, #9941F2 0%, #6F41F2 100%);
-    box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.1);
-    border-radius: 34px;
-  }
-  
-  #arrow {
-    position: absolute;
-    top: 5px;
-    bottom: 0;
-    left: 0;
-    right: 1px;
-    margin: auto;
-  }
-  
-  #line-about {
-    position: relative;
-    top: 5px;
-  }
-  
-  #profile-pic {
-    position: relative;
-    width: 192px;
-    top: 0;
+
+  .profile-pic {
+    width: 270px;
+    height: 270px;
     box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
     border-radius: 200px;
     z-index: 1;
+    margin-left: -50px;
+    margin-top: -200px;
+    margin-right: 50px;
+  }
+
+  #profile-pic-mobile {
+    display: none;
   }
   
-  .card {
-    background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
-    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.06);
+  @media (max-width: 1350px) {
     
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  #about-card {
-    position: relative;
-    margin-top: 30px;
-    width: 570px;
-    padding: 0px 0px 38px 0px;
-  }
-  
-  #about-text {
-    position: relative;
-    margin-top: 20px;
-    width: 84%;
-    text-align: left;
-  }
-  
-  #about-technologies {
-    margin-top: 20px;
-    position: relative;
-    width: 84%;
-    text-align: left;
-  }
-  
-  #about-technologies ul {
-    margin-top: 10px;
-    height: 80px;
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-  }
-  
-  @media (max-width: 768px) {
-    #about-card {
-      width: 90%;
-      max-width: 570px;
-      padding: 0px 0px 5vw 0px;
+    .title-container {
+      flex-direction: column-reverse;
+      margin-top: 10%;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      margin: 20px 20px 40px 40px;
+    }
+
+    .title-text {
+      font-size: 8vw;
+    }
+
+    .title-subtitle {
+      font-size: 14pt;
+    }
+
+    .title-card p {
+      margin-top: 10px;
+    }
+
+    @media (min-width: 900px) {
+      .title-text {
+        font-size: 70px;
+      }
+
+      .title-subtitle {
+        font-size: 16pt;
+      }
     }
   }
   
+  @media (max-width: 480px) {
+    
+    .title-container {
+      margin-top: 210px;
+    }
+
+    .title-card {
+      padding: 0px 35px 35px 35px;
+    }
+
+    .title-text {
+      font-size: 11.5vw;
+    }
+
+    .title-subtitle {
+      margin-top: 3px;
+      font-size: 16px;
+    }
+    
+    #profile-pic {
+      display: none;
+    }
+
+    #profile-pic-mobile {
+      width: 160px;
+      height: 160px;
+      display: block;
+      z-index: 8;
+      margin: 0;
+      position: absolute;
+      top: 115px;
+      left: calc(50% - 80px);
+    }
+
+    #circle-3 {
+      display: none;
+    }
+
+    .title-card p {
+      margin-top: 15px;
+    }
+  }
+
   /**************** What I Do ******************/
   
   #what-i-do {
@@ -510,12 +572,27 @@
     justify-content: center;
     text-align: center;
   }
+
+  #what-i-do-cta {
+    width: 120px;
+    padding-bottom: 13px;
+
+    @media (max-height: 842px) {
+      display: none;
+    }
+
+    @media (min-width: 1350px) {
+      display: flex;
+      justify-content: center;
+    }
+  }
   
   #what-i-do-line {
     transform: scaleY(-1);
+    margin-top: -3px;
     position: relative;
     top: -5px;
-    z-index: -1;
+    z-index: -5;
   }
   
   #what-i-do h2 {
@@ -677,6 +754,7 @@
   
   /***************** Projects *******************/
   #projects {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -798,17 +876,35 @@
       width: 845px;
     }
 
-    #erbe-2 {
-      margin-left: 38px;
+    #esnlc-website {
+      width: 730px;
     }
 
-    #officeworks-1, #officeworks-2 {
+    #erbe-1 {
+      width: 217px;
+    }
+
+    #erbe-2 {
+      margin-left: 38px;
+      width: 579px;
+    }
+
+    #officeworks-1 {
       margin-right: 36px;
+      width: 292px;
+    }
+
+    #officeworks-2 {
+      margin-right: 36px;
+      width: 168px;
+    }
+
+    #officeworks-3 {
+      width: 267px;
     }
 
     #project-1 {
       margin-top: 50px;
-
     }
 
     #project-2 {
@@ -948,13 +1044,24 @@
   }
   
   /****************** Contact *******************/
-  
+
   #contact {
+    opacity: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
+  }
+
+  .card {
+    background: linear-gradient(180deg, #F8F8F8 0%, #FFFFFF 100%);
+    box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.06);
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
   
   #contact-line {
@@ -1090,12 +1197,12 @@
     animation: appear 2s ease forwards;
   }
   
-  .title {
+  .title-text {
     animation: fadein-up 1.8s ease 2.5s forwards;
     animation-fill-mode: both;
   }
   
-  .title-subtitle {
+  .title-subtitle, .title-card, .title-card p {
     animation: fadein-up-0 2s ease 2.5s forwards;
     animation-fill-mode: both;
   }
@@ -1105,18 +1212,24 @@
     animation-fill-mode: both;
   }
   
-  .logo-container, nav, .toggle-btn  {
-    animation: fadein-up-1 1.5s ease 2.5s forwards;
+  .logo-container, nav, .toggle-btn {
+    animation: fadein-up-0 1.5s ease 3.2s forwards;
+    animation-fill-mode: both;
+  }
+
+  .circle, .profile-pic {
+    animation: fadein-up-0 2s ease 3s forwards;
     animation-fill-mode: both;
   }
   
-  #about {
+  #what-i-do {
     animation: fadein-up-2 2s ease 2.5s forwards;
     animation-fill-mode: both;
   }
   
   .come-in {
     transform: translateY(150px);
+    opacity: 1;
     animation: come-in 2s ease forwards;
     animation-fill-mode: both;
   }

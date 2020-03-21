@@ -47,7 +47,17 @@
       <a class="cta" id="nav-links__button" href="mailto:ryan@ryanlewien.com">Get In Touch</a>
     </nav>
 
-    <!-- Floating Buttons in bottom left -->
+    <div class="circles">
+      <div id="circle-1" class="circle"></div>
+      <div id="circle-2-clipper">
+        <div id="circle-2" class="circle"></div>
+      </div>
+      <div id="circle-3" class="circle"></div>
+      <div id="circle-4" class="circle"></div>
+    </div>
+    <img id="profile-pic-mobile" class="profile-pic" src="./resources/img/profile-pic.jpg" alt="profile-pic">
+    
+    <!-- Floating Buttons in bottom right -->
     <ul class="floating-icons">
       <li>
         <div class="tooltip">
@@ -135,49 +145,23 @@
 
     <!--?------------------- Title ------------------------>
 
-    <div class="title-container">
-      <div class="title-text-container">
-        <h1 class="title"><span>Hi!</span> I'm Ryan.</h1>
-        <h4 class="title-subtitle">Software Developer, IS Masters Student & UX Enthusiast.</h4>
-      </div>
-    </div>
-
-
-    <!--?------------------- About ------------------------>
-
-    <section id="about">
-      <button id="down-arrow">
-        <img id="arrow" src="./resources/img/arrow.svg" alt="arrow">
-      </button>
-
-      <img id="line-about" class="line" src="./resources/img/line.svg" alt="line">
-      <img id="profile-pic" src="./resources/img/profile-pic.jpg" alt="profile-pic">
-        
-      <div class="card" id="about-card">
-        <h2>About Me</h2>
-        <div id="about-text">
-          <p>I’m Ryan, a software development student from Melbourne, Australia. With 
+    <section id="title">
+      <div class="title-container">
+        <div class="title-card">
+          <h1 class="title-text"><span>Hi!</span> I'm Ryan.</h1>
+          <h4 class="title-subtitle">Software Developer, IS Masters Student & UX Enthusiast.</h4>
+          <p>I’m Ryan Lewien, a software development student from Melbourne, Australia. With 
             a background in computing and software systems and a strong passion for 
             design, I develop intuitive, pixel-perfect user interfaces with modern backends.</p>
         </div>
-        <div id="about-technologies">
-          <p>Here’s a few technologies I’ve been working with recently:</p>
-          <ul>
-            <li>Javascript (ES6+)</li>
-            <li>HTML & (S)CSS</li> 
-            <li>Java</li>
-            <li>PHP</li>
-            <li>React</li>
-            <li>Express</li>
-            <li>MongoDB</li>
-          </ul>
-        </div>
+        <img id="profile-pic" class="profile-pic" src="./resources/img/profile-pic.jpg" alt="profile-pic">
       </div>
     </section>
 
     <!--?------------------- What I Do ------------------------>
 
     <section id="what-i-do">
+      <button id="what-i-do-cta" class="cta">About Me</button>
       <img id="what-i-do-line" class="line" src="./resources/img/line.svg" alt="line">
       <div class="end-dot"></div>
       <h2>What I do</h2>
@@ -273,7 +257,7 @@
       <div class="projects-container">
         <div class="featured-project" id="project-1">
           <div class="project-img-container">
-            <img class="project-img" src="./resources/img/esnlc.webp" alt="esnlc-website">
+            <img class="project-img" src="./resources/img/esnlc.jpg" id="esnlc-website">
           </div>
           <div class="project-info">
             <h4 class="project-title">ESNLC Website</h4>
@@ -292,8 +276,8 @@
 
         <div class="featured-project right-align" id="project-2">
           <div class="project-img-container" id="img-container-2">
-            <img class="project-img" src="./resources/img/erbe-1.webp" id="erbe-1">
-            <img class="project-img" src="./resources/img/erbe-2.webp" id="erbe-2">
+            <img class="project-img" src="./resources/img/erbe-1.jpg" id="erbe-1">
+            <img class="project-img" src="./resources/img/erbe-2.jpg" id="erbe-2">
           </div>
           <div class="project-info">
             <h4 class="project-title">Erbe Project</h4>
@@ -311,9 +295,9 @@
 
         <div class="featured-project" id="project-3">
           <div class="project-img-container">
-            <img class="project-img" src="./resources/img/officeworks-1.webp" id="officeworks-1">
-            <img class="project-img" src="./resources/img/officeworks-2.webp" id="officeworks-2">
-            <img class="project-img" src="./resources/img/officeworks-3.webp" id="officeworks-3">
+            <img class="project-img" src="./resources/img/officeworks-1.jpg" id="officeworks-1">
+            <img class="project-img" src="./resources/img/officeworks-2.jpg" id="officeworks-2">
+            <img class="project-img" src="./resources/img/officeworks-3.jpg" id="officeworks-3">
           </div>
           <div class="project-info">
             <h4 class="project-title">Officeworks</h4>

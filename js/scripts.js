@@ -5,21 +5,15 @@ $('html, body').animate({
 }, 1000);
 });
 
-$("#mobile-aboutlink").click(function() {
+$("#what-i-do-cta").click(function() {
 $('html, body').animate({
-    scrollTop: $("#about").offset().top + 190
-}, 1000);
-});
-
-$("#down-arrow").click(function() {
-$('html, body').animate({
-    scrollTop: $("#about").offset().top + 190
+    scrollTop: $("#what-i-do").offset().top + 150
 }, 1000);
 });
 
 $("#what-i-dolink").click(function() {
 $('html, body').animate({
-    scrollTop: $("#what-i-do").offset().top + 100
+    scrollTop: $("#what-i-do").offset().top + 150
 }, 1000);
 });
 
@@ -31,13 +25,13 @@ $('html, body').animate({
 
 $("#projectslink").click(function() {
 $('html, body').animate({
-    scrollTop: $("#projects").offset().top + 190
+    scrollTop: $("#projects").offset().top + 220
 }, 1000);
 });
 
 $("#mobile-projectslink").click(function() {
 $('html, body').animate({
-    scrollTop: $("#projects").offset().top + 190
+    scrollTop: $("#projects").offset().top + 180
 }, 1000);
 });
 
@@ -109,7 +103,7 @@ function checkOffset() {
     var a=$(document).scrollTop()+window.innerHeight;
     var b=$('footer').offset().top + 20;
     if (a<b) {
-      $('.floating-icons').css('bottom', '55px');
+      $('.floating-icons').css('bottom', '80px');
     } else {
       $('.floating-icons').css('bottom', (55+(a-b))+'px');
     }
