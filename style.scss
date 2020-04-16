@@ -1203,7 +1203,7 @@
     animation-fill-mode: both;
   }
   
-  .title-subtitle, .title-card, .title-card p {
+  .title-subtitle, .title-card, .title-card p, .profile-pic {
     animation: fadein-up-0 2s ease 2.5s forwards;
     animation-fill-mode: both;
   }
@@ -1218,7 +1218,7 @@
     animation-fill-mode: both;
   }
 
-  .circle, .profile-pic {
+  .circle {
     animation: fadein-up-0 2s ease 3s forwards;
     animation-fill-mode: both;
   }

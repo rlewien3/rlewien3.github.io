@@ -1547,7 +1547,7 @@ footer p {
           animation-fill-mode: both;
 }
 
-.title-subtitle, .title-card, .title-card p {
+.title-subtitle, .title-card, .title-card p, .profile-pic {
   -webkit-animation: fadein-up-0 2s ease 2.5s forwards;
           animation: fadein-up-0 2s ease 2.5s forwards;
   -webkit-animation-fill-mode: both;
@@ -1568,7 +1568,7 @@ footer p {
           animation-fill-mode: both;
 }
 
-.circle, .profile-pic {
+.circle {
   -webkit-animation: fadein-up-0 2s ease 3s forwards;
           animation: fadein-up-0 2s ease 3s forwards;
   -webkit-animation-fill-mode: both;
