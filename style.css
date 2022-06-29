@@ -20,7 +20,7 @@ p, li {
 }
 
 @media (max-width: 768px) {
-  p {
+  p, li {
     font-size: 16px;
     line-height: 23px;
   }
@@ -653,7 +653,7 @@ nav {
   width: 120px;
 }
 
-@media (max-height: 842px) {
+@media (max-height: 860px) {
   #what-i-do-cta {
     display: none;
   }
@@ -795,6 +795,15 @@ nav {
 }
 
 .what-i-do-card-back ul li {
+  padding-bottom: 4px;
+}
+
+.what-i-do-card-back ul, .mobile-card-bottom ul {
+  padding-left: 20px;
+  padding-top: 8px;
+}
+
+.what-i-do-card-back ul li, .mobile-card-bottom ul li {
   padding-bottom: 4px;
 }
 
