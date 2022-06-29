@@ -9,7 +9,7 @@
     background-color: #F8F8F8;
   }
   
-  p {
+  p, li {
     font-style: normal;
     font-weight: 300;
     font-size: 13px;
@@ -41,7 +41,7 @@
     text-transform: uppercase;
   }
   
-  li {
+  .floating-icons li {
     font-style: normal;
     font-weight: 300;
     font-size: 13px;
@@ -71,7 +71,14 @@
     box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
     border-radius: 34px;
     text-align: center;
-    padding-top: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease-out;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
   }
 
   .end-dot {
@@ -155,8 +162,8 @@
   }
 
   #circle-1 {
-    width: 530px;
-    height: 530px;
+    min-width: 530px;
+    min-height: 530px;
     right: 45px;
     top: -265px;
     background: linear-gradient(137.35deg, #8C98FF 28.7%, #606BED 74.81%);
@@ -165,8 +172,8 @@
 
   #circle-2-clipper {
     position: absolute;
-    width: 249px;
-    height: 380px;
+    min-width: 249px;
+    min-height: 380px;
     right: 0px;
     top: -63px;
     overflow: hidden;
@@ -175,15 +182,15 @@
   #circle-2 {
     top: 0;
     left: 0;
-    width: 306px;
-    height: 306px;
+    min-width: 306px;
+    min-height: 306px;
     background: linear-gradient(180deg, #BDA6ED 0%, #D3C6EE 100%);
     z-index: 6;
   }
 
   #circle-3 {
-    width: 136px;
-    height: 136px;
+    min-width: 136px;
+    min-height: 136px;
     right: 160px;
     top: 170px;
     background: linear-gradient(180deg, #9941F2 0%, #6F41F2 100%);
@@ -191,8 +198,8 @@
   }
 
   #circle-4 {
-    width: 61px;
-    height: 61px;
+    min-width: 61px;
+    min-height: 61px;
     right: 125px;
     top: 109px;
     background: linear-gradient(125.84deg, #A88CF8 8.94%, #8A69E9 74.11%);
@@ -401,15 +408,21 @@
 
   /******** Loading Bar *********/
   .loading {
-    position: absolute;
-    width: 70px;
-    height: 70px;
-    left: calc(50vw - 35px);
-    top: calc(50vh - 35px);
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    left: calc(50vw - 30px);
+    top: calc(50vh - 30px);
     z-index: 20;
     visibility: hidden;
-    transform: rotate(-90deg);
-    transform-origin: 50% 50%;
+  }
+
+  .loading-img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 60px;
+    height: 60px;
   }
   
   #loading-circle {
@@ -449,6 +462,7 @@
     font-size: 21px;
     letter-spacing: 0.02em;
     color: #616161;
+    margin-top: 8px;
   }
   
   .title-text span {
@@ -465,7 +479,7 @@
 
     p {
       margin-top: 20px;
-      max-width: 436px;
+      max-width: 460px;
     }
   }
 
@@ -475,9 +489,8 @@
     box-shadow: 0px 14px 30px rgba(0, 0, 0, 0.2);
     border-radius: 200px;
     z-index: 1;
-    margin-left: -50px;
-    margin-top: -200px;
-    margin-right: 50px;
+    margin-left: -130px;
+    margin-top: -170px;
   }
 
   #profile-pic-mobile {
@@ -575,7 +588,6 @@
 
   #what-i-do-cta {
     width: 120px;
-    padding-bottom: 13px;
 
     @media (max-height: 842px) {
       display: none;
@@ -651,7 +663,6 @@
     position: relative;
     width: 100%;
     height: 100%;
-    text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
   }
@@ -680,12 +691,17 @@
     border-radius: 54px;
     padding: 55px 20px 25px 23px;
     background-color: white;
-    color: white;
     transform: rotateY(180deg);
-  }
-  
-  .what-i-do-card-back p {
     text-align: left;
+
+    ul {
+      padding-left: 20px;
+      padding-top: 8px;
+
+      li {
+        padding-bottom: 4px;
+      }
+    }
   }
   
   .what-i-do-card-subtitle {
@@ -1183,11 +1199,34 @@
     100% { opacity: 0; stroke-dashoffset: -332px; }
   }
 
+  @keyframes cover-l {
+    0% { visibility: visible; opacity: 1; }
+    100% { opacity: 1; stroke-dashoffset: -80; }
+  }
+
+  @keyframes cover-r {
+    0% { visibility: visible; opacity: 1; }
+    20% { stroke-dashoffset: 0; }
+    100% { opacity: 1; stroke-dashoffset: -80; }
+  }
+
   @keyframes appear {
     0% { visibility: visible; opacity: 0; }
     10% { opacity: 1; }
     90% { opacity: 1; }
     100% { opacity: 0; }
+  }
+
+  #cover-r {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 0;
+    animation: cover-r 2s cubic-bezier(.33,-0.01,0,1.12) forwards;
+  }
+
+  #cover-l {
+    stroke-dasharray: 80;
+    stroke-dashoffset: 0;
+    animation: cover-l 1s cubic-bezier(.33,-0.01,0,1.12) forwards;
   }
 
   #loading-circle {
